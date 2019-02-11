@@ -1,0 +1,29 @@
+body {
+  background-color: #CBC2E9;
+  margin: auto;
+  width: 85%;
+}
+
+section{
+  margin-top: 15px;
+  box-sizing: border-box;
+  border: 4px #F1EBF6 solid;
+}
+
+div {
+  background-color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+td {
+  width: 50%;
+  text-align: center;
+  padding: 1em;
+}
+
+.iconImg{
+  height:auto;
+  width:20%;
+  display: block;
+}
