@@ -21,7 +21,7 @@ rp(url)
     // console.log(html)
     console.log("There are " + (cheerio('h1', html).length) + " instances of the tag:");
     // console.log(cheerio('h1', html).text()); //retrieves as a single string with all tag payload each seperated by a whitespace
-    console.log(cheerio('#quotesTable', html).text());
+    console.log(cheerio('#quotesSection', html).text());
     console.log('Done')
   })
   .catch(function(err){
