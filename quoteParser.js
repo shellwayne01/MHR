@@ -18,8 +18,8 @@ rp(url) //create an object to return desired info and export instead of all this
     //success!
     console.log(html)
     console.log('Yay!')
-    console.log("There are " + (cheerio('h1', html).length) + " instances of the tag:");
-    console.log(cheerio('h1', html.text));
+    console.log("There are " + (cheerio('tr', html).length) + " instances of the tag.");
+    console.log(cheerio('tr', html.text));
   })
   .catch(function(err){
     //handle error
