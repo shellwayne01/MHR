@@ -1,0 +1,26 @@
+{
+  "name": "favs",
+  "version": "1.0.0",
+  "description": "Site for MHR Tool",
+  "main": "Favs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shellwayne01/MHR.git"
+  },
+  "author": "Yorranshell Wattson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shellwayne01/MHR/issues"
+  },
+  "homepage": "https://github.com/shellwayne01/MHR#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.11",
+    "request": "^2.88.0",
+    "request-promise": "^4.2.2"
+  }
+}
