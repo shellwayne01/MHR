@@ -1,7 +1,37 @@
 body {
   background-color: #CBC2E9;
   margin: auto;
-  width: 85%;
+}
+
+.mainNav {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.mainNav a, li{
+  flex:auto;
+  line-height: 3.0;  /* 3x current font size height */
+  vertical-align: middle;
+}
+
+.mainNav li {
+  color: white;
+  background-color: #8056A4;
+  height: 5%;
+  text-align: center;
+}
+
+.mainNav li:hover{
+  background-color: #2F0F4B;
+}
+
+.mainContent{
+  width: 65%;
+  margin: auto;
+  background-color: #CBC2E9;
 }
 
 section{
@@ -14,6 +44,10 @@ div {
   background-color: white;
   text-align: center;
   padding: 1em;
+}
+
+li {
+  list-style-type: none;
 }
 
 td {

@@ -10,20 +10,21 @@ var server = app.listen(port, function() {
 });
 
 //Scraping w/ Cheerio
-var rp = require('request-promise');
-var cheerio = require('cheerio');
-// const quoteParser = require('./quoteParser'); // quoteParser needs modifying
+// var rp = require('request-promise');
+// var cheerio = require('cheerio');
 var url = 'https://shellwayne01.github.io/MHR/';
+var parsedQuotes = require('./quoteParser')
 
-rp(url)
-  .then(function(html){
-    //success!
-    // console.log(html)
-    console.log("There are " + (cheerio('h1', html).length) + " instances of the tag:");
-    // console.log(cheerio('h1', html).text()); //retrieves as a single string with all tag payload each seperated by a whitespace
-    console.log(cheerio('#quotesSection', html).text());
-    console.log('Done')
-  })
-  .catch(function(err){
-    //handle error
-  });
+parsedQuotes(url);
+// rp(url)
+//   .then(function(html){
+//     success!
+//     console.log(html)
+//     console.log("There are " + (cheerio('h1', html).length) + " instances of the tag:");
+//     console.log(cheerio('h1', html).text()); //retrieves as a single string with all tag payload each seperated by a whitespace
+//     console.log(cheerio('#Quotes', html));
+//     console.log('Done')
+//   })
+//   .catch(function(err){
+//     //handle error
+//   });
