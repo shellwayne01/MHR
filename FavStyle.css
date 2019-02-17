@@ -22,6 +22,7 @@ body {
   background-color: #8056A4;
   height: 5%;
   text-align: center;
+  font-family: 'Abril Fatface';
 }
 
 .mainNav li:hover{
@@ -84,8 +85,8 @@ td {
 
 /*Animations*/
 @keyframes bloat {
- 0% {background-color: gray;}
- 25% {background-color: black; transform: scale(1.5,1.5);}
- 50% {background-color: gray;}
+ 0% {background-color: #CBC2E9;}
+ 25% {background-color: #2F0F4B; transform: scale(1.5,1.5);}
+ 50% {background-color: #CBC2E9;}
  100% {background-color: white; transform: scale(1, 1);}
 }
