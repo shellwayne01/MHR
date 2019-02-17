@@ -29,7 +29,7 @@ body {
 }
 
 .mainContent{
-  width: 65%;
+  width: 75%;
   margin: auto;
   background-color: #CBC2E9;
 }
@@ -60,7 +60,6 @@ div {
 .gallery img:hover{
   animation-name: bloat;
   animation-duration: 3s;
-  background-color: black;
 }
 
 h1{
@@ -86,7 +85,7 @@ td {
 /*Animations*/
 @keyframes bloat {
  0% {background-color: gray;}
- 25% {background-color: black; transform: scale(2,2);}
- 50% {background-color: black; transform: scale(2,2);}
- 100% {background-color: gray; transform: scale(.5,.5);}
+ 25% {background-color: black; transform: scale(1.5,1.5);}
+ 50% {background-color: gray;}
+ 100% {background-color: white; transform: scale(1, 1);}
 }
