@@ -17,6 +17,10 @@ body {
   vertical-align: middle;
 }
 
+.mainNav a:link{
+  text-decoration: none;
+}
+
 .mainNav li {
   color: white;
   background-color: #8056A4;

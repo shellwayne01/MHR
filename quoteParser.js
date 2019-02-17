@@ -1,9 +1,10 @@
 //Web Scraping w/ cheerio: Formatting/Parsing Data
 const rp = require('request-promise');
 const cheerio = require('cheerio');
-// const url = 'https://shellwayne01.github.io/MHR/';
+const url = 'https://shellwayne01.github.io/MHR/';
+var fs = require('fs');
 
-const parser = function (url){
+// const parser = function (url){
 rp(url)
   .then(function(html){
     //success!
@@ -31,14 +32,18 @@ rp(url)
       var quote = new Quote(array1[i], array2[i]);
       quotes.push(quote);
     }
+    // console.log(quotes)
 
-    console.log(quotes)
-    return quotes;
+    var json = JSON.stringify(quotes);
+    fs.writeFile('Quotes.json', json, 'utf8', (err) => { //pretty json
+      if (err) throw err;
+      console.log('The file has been saved!');
+    });
   })
   .catch(function(err){
     //handle error
   });
-};
+// };
 
 
 function Quote(phrase, origin){
@@ -50,4 +55,4 @@ function isEven(number){
   return (number % 2 == 0)
 }
 
-module.exports = parser;
+// module.exports = rp(url);

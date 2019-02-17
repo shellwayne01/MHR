@@ -18,9 +18,10 @@
   "homepage": "https://github.com/shellwayne01/MHR#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "ejs": "^2.6.1",
     "express": "^4.16.4",
-    "mongoose": "^5.4.11",
+    "mongoose": "^5.4.13",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2"
+    "request-promise": "^4.2.4"
   }
 }
