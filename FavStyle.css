@@ -46,6 +46,10 @@ div {
   padding: 1em;
 }
 
+h1{
+  font-family: 'Abril Fatface';
+  font-size: 30px;
+}
 li {
   list-style-type: none;
 }
