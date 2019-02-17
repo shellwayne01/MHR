@@ -46,6 +46,23 @@ div {
   padding: 1em;
 }
 
+.gallery {
+  display: inline-block; /*or block?*/
+}
+
+.gallery img {
+  float:left;
+  width: 20%; /*modify*/
+  height: auto;
+  padding: 2%;
+}
+
+.gallery img:hover{
+  animation-name: bloat;
+  animation-duration: 3s;
+  background-color: black;
+}
+
 h1{
   font-family: 'Abril Fatface';
   font-size: 30px;
@@ -64,4 +81,12 @@ td {
   height:auto;
   width:20%;
   display: block;
+}
+
+/*Animations*/
+@keyframes bloat {
+ 0% {background-color: gray;}
+ 25% {background-color: black; transform: scale(2,2);}
+ 50% {background-color: black; transform: scale(2,2);}
+ 100% {background-color: gray; transform: scale(.5,.5);}
 }
