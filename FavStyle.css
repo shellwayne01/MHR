@@ -87,6 +87,11 @@ td {
   display: block;
 }
 
+#map{
+  height: 400px;
+}
+
+
 /*Animations*/
 @keyframes bloat {
  0% {background-color: #CBC2E9;}

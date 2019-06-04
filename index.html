@@ -1,8 +1,16 @@
 <html>
+<!--
+Convert galleries to slideshows.
+Clean up to get rid of repititious code.
+Switch DB.
+-->
 <head>
   <title>Favorites</title> <!--Use ejs to duplicate the format and allow for extraction of excel data. Or Word table-->
-  <meta/>
-  <script type="text/javascript" src="Favs.js"></script>
+  <!-- <meta/> -->
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+  integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+  crossorigin=""/>
   <link rel="stylesheet" type="text/css" href="FavStyle.css">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 </head>
@@ -65,7 +73,7 @@
 
     <section id="IndoorFriendly">
       <div> <!--Can use ejs to make this cleaner. Incorporate ejs later-->
-        <h1>Favorite Books</h1>
+        <h1>Books</h1>
           <li>A Tree Grows in Brooklyn</li>
           <li>Memory of Water</li>
           <li>The God of Small Things</li>
@@ -78,57 +86,72 @@
           </div>
       </div>
       <div>
-        <h1>Favorite Movies</h1>
+        <h1>Movies</h1>
           <li>The Dark Knight</li>
           <li>A Bronx Tale</li>
           <li>Slumdog Millionaire</li>
           <li>City of God</li>
           <li>Oldboy</li>
+          <div class = "gallery">
+            <img src= "https://is1-ssl.mzstatic.com/image/thumb/Video118/v4/00/ee/3a/00ee3a87-eeda-6d4b-bb4b-5a45ef1e4579/contsched.vhzbldts.lsr/268x0w.jpg" />
+            <img src= "https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/A_Bronx_Tale.jpg/220px-A_Bronx_Tale.jpg" />
+            <img src= "https://m.media-amazon.com/images/M/MV5BZmNjZWI3NzktYWI1Mi00OTAyLWJkNTYtMzUwYTFlZDA0Y2UwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" />
+            <img src= "https://m.media-amazon.com/images/M/MV5BMGU5OWEwZDItNmNkMC00NzZmLTk1YTctNzVhZTJjM2NlZTVmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" />
+            <img src= "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Oldboykoreanposter.jpg/220px-Oldboykoreanposter.jpg" />
+
+          </div>
       </div>
     </section>
 
     <section id="Food">
       <div>
-        <h1>Favorite Restaurants</h1>
-        <li>Yum and Tum</li>
-        <li>Lobsters and Burgers</li>
-        <li>Qi</li>
-        <li>Monique's Bday Restaurant</li>
+        <h1>Restaurants</h1>
+        <li>Y-T</li>
+        <li>L-B</li>
+        <li>H-C</li>
+        <li>N-C</li>
+        <div class = "gallery">
+          <img src= "https://s3-media3.fl.yelpcdn.com/bphoto/5179Qe1e_rq0kOsi2aHELQ/ls.jpg" />
+          <img src= "https://assets.bwbx.io/images/users/iqjWHBFdfxIU/i6JDE_NnDhiA/v1/-1x-1.jpg" />
+          <img src= "https://havanacafe.info/images/img_6194-small.jpg?crc=468475893" />
+          <img src= "https://www.simplyrecipes.com/wp-content/uploads/2019/04/Nachos-LEAD-3.jpg" />
+        </div>
       </div>
     </section>
 
     <section id="Events">
       <div>
-        <h1>Favorite Upcoming Events</h1>
+        <h1>Niche Events</h1>
         <li>Conferences</li>
         <li>Hackathons</li>
         <li>Volunteering</li>
         <li>Hobbies</li>
       </div>
       <div>
-        <h1>Favorite Clubs</h1>
-        <li>American</li>
-        <li>Latino</li>
-        <li>Carribbean</li>
-      </div>
-      <div>
-        <h1>Favorite Concerts</h1>
+        <h1>Concerts</h1>
         <li>Rihanna</li>
         <li>Raye</li>
         <li>Miguel</li>
         <li>Tinashe</li>
       </div>
+      <div>
+        <h1>Nightlife</h1>
+        <li>American</li>
+        <li>Latino</li>
+        <li>Carribbean</li>
+      </div>
     </section>
 
     <section id= "Travel">
       <div>
-        <h1>Favorite Domestic Destinations</h1>
+        <div id="map"></div>
+        <h1>Domestic Destinations</h1>
         <li>New York</li>
         <li>Pennsylvania</li>
         <li>Florida</li>
       </div>
       <div>
-        <h1>Favorite International Destinations</h1>
+        <h1>International Destinations</h1>
         <li>Costa Rica</li>
         <li>Virgin Islands</li>
         <li>Puerto Rico</li>
@@ -139,6 +162,11 @@
 
   <footer>
   </footer>
+
+  <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+  integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+  crossorigin=""></script>
+   <script type="text/javascript" src="Favs.js"></script>
 </body>
 
 </html>
