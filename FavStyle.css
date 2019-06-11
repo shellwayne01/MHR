@@ -64,8 +64,11 @@ div {
 
 .gallery img:hover{
   animation-name: bloat;
-  animation-duration: 3s;
+  animation-duration: 1s;
+  transform: scale(1.5,1.5);
+  background-color: #2F0F4B;
 }
+
 
 h1{
   font-family: 'Abril Fatface';
@@ -87,10 +90,13 @@ td {
   display: block;
 }
 
+#map{
+  height: 400px;
+}
+
+
 /*Animations*/
 @keyframes bloat {
  0% {background-color: #CBC2E9;}
- 25% {background-color: #2F0F4B; transform: scale(1.5,1.5);}
- 50% {background-color: #CBC2E9;}
- 100% {background-color: white; transform: scale(1, 1);}
+ 100% {background-color: #2F0F4B;}
 }
