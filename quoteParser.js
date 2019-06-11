@@ -1,4 +1,5 @@
 //Web Scraping w/ cheerio: Formatting/Parsing Data
+//Run in terminal
 const rp = require('request-promise');
 const cheerio = require('cheerio');
 const url = 'https://shellwayne01.github.io/MHR/';
@@ -16,11 +17,12 @@ rp(url)
     var quote = [];
     var toWatch = [];
     var len = cheerio('td', html).length;
+    console.log(len);
 
     //Retrieves quotes
     for (i=0; i < len; i++) {
       // console.log('TAG '+i+' :');
-      if (isEven(i)){
+      if ( isEven(i) ){
       array1.push( cheerio('td', html)[i].children[0].data.toString() ); //based on html structure of site
       }else{
       array2.push( cheerio('td', html)[i].children[0].data.toString() );
@@ -67,9 +69,9 @@ rp(url)
   //   })
   //
   // })
-  .catch(function(err){
-    //handle error
- });
+ //  .catch(function(err){
+ //    //handle error
+ // });
 })
 
 
@@ -84,7 +86,7 @@ function Media(books, movies){
 }
 
 function isEven(number){
-  return (number % 2 == 0)
+  return (number % 2 == 0);
 }
 
 // module.exports = rp(url);

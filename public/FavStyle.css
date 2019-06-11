@@ -1,0 +1,126 @@
+body {
+  background-color: #CBC2E9;
+  margin: auto;
+}
+
+.mainNav {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.mainNav a, li{
+  flex:auto;
+  line-height: 3.0;  /* 3x current font size height */
+  vertical-align: middle;
+}
+
+.mainNav a:link{
+  text-decoration: none;
+}
+
+.mainNav li {
+  color: white;
+  background-color: #8056A4;
+  height: 5%;
+  text-align: center;
+  font-family: 'Abril Fatface';
+}
+
+.mainNav li:hover{
+  background-color: #2F0F4B;
+}
+
+.mainContent{
+  width: 75%;
+  margin: auto;
+  background-color: #CBC2E9;
+}
+
+section{
+  margin-top: 15px;
+  box-sizing: border-box;
+  border: 4px #F1EBF6 solid;
+}
+
+div {
+  background-color: white;
+  text-align: center;
+  padding: 1em;
+}
+
+#siteIcon{
+  visibility: hidden;
+}
+
+.gallery {
+  display: inline-block; /*or block?*/
+}
+
+.gallery img {
+  float:left;
+  width: 20%; /*modify*/
+  height: auto;
+  padding: 2%;
+}
+
+.gallery img:hover{
+  animation-name: bloat;
+  animation-duration: 3s;
+}
+
+h1{
+  font-family: 'Abril Fatface';
+  font-size: 30px;
+}
+li {
+  list-style-type: none;
+}
+
+td {
+  width: 50%;
+  text-align: center;
+  padding: 1em;
+}
+
+.iconImg{
+  height:auto;
+  width:20%;
+  display: block;
+}
+
+/*Animations*/
+@keyframes bloat {
+ 0% {background-color: #CBC2E9;}
+ 25% {background-color: #2F0F4B; transform: scale(1.5,1.5);}
+ 50% {background-color: #CBC2E9;}
+ 100% {background-color: white; transform: scale(1, 1);}
+}
+
+@media screen and (max-width: 600px) {
+  .siteIcon{
+    visibility: visible;
+    width: 100px;
+    height: 100px;
+  }
+
+  body{
+    font-size: 30px; /*divide by 16 for em */
+  }
+
+  h1{
+    font-size: 50px;
+  }
+
+  img{
+    height: 50px;
+    width:50px;
+  }
+
+  .mainNav{
+    visibility: hidden;
+  }
+
+}

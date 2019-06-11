@@ -1,0 +1,150 @@
+<html>
+<head>
+  <title>Favorites</title> <!--Use ejs to duplicate the format and allow for extraction of excel data. Or Word table-->
+  <meta/>
+  <script type="text/javascript" src="Favs.js"></script>
+  <!-- <script type="text/javascript" src="React.js"></script> -->
+  <link rel="stylesheet" type="text/css" href="FavStyle.css">
+  <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+</head>
+
+<!--To save myself from web scraping issues, I'll just web scrape my own site-->
+<body>
+  <!-- <img id= "siteIcon" src="https://cdn-images-1.medium.com/max/600/1*rddekGCO3PjhXqtePcIYIQ.png"/> -->
+  <nav class = "mainNav">
+    <a href="#Quotes"><li>Quotes</li></a>
+    <a href="#IndoorFriendly"><li>IndoorFriendly</li></a>
+    <a href="#Food"><li>Food</li></a>
+    <a href="#Events"><li>Events</li></a>
+    <a href="#Travel"><li>Travel</li></a>
+  </nav>
+  <div class = "mainContent">
+    <section id="Quotes">
+      <div>
+        <h1>Favorite Quotes</h1>
+        <table id="quotesTable">
+          <tr>
+            <th>Quote</th>
+            <th>Origin</th>
+          </tr>
+          <tr>
+            <td>"Trouble don't last always. Better enjoy life now before it's too late."</td>
+            <td>Lollipop <img class= "iconImg" src= "https://raw.githubusercontent.com/shellwayne01/MHR/secondary/Images/lollipop.png" /> </td>
+          </tr>
+          <tr>
+            <td>"Oh, you think darkness is your ally. But you merely adopted the dark; I was born in it, molded by it. I didn't see the light until I was already a man, by then it was nothing to me but BLINDING! The shadows betray you, because they belong to me!"</td>
+            <td>Bane <img class="iconImg" src="https://vignette.wikia.nocookie.net/thedarkknighttrilogy/images/3/35/Bane_TDKR.jpg/revision/latest?cb=20130114183531"/></td>
+          </tr>
+          <tr>
+            <td>"It's not who you are underneath, it's what you do that defines you."</td>
+            <td>Rachel <img class="iconImg" src="http://oyster.ignimgs.com/wordpress/stg.ign.com/2012/06/Batman-Begins-rachel-dawes-9912939-1280-720.jpg"/></td>
+          </tr>
+          <tr>
+            <td>"You gotta be bad, you gotta be bold You gotta be wiser,<br/> you gotta be hard You gotta be tough, you gotta be stronger<br/>You gotta be cool, you gotta be calm You gotta stay together<br/>
+                All I know, all I know, love will save the day"</td>
+            <td>Des'ree <img class="iconImg" src="https://img.discogs.com/kaQ8f5TVmp-MeXVrYZcP2VOZ-pw=/fit-in/402x611/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/A-37238-1213109062.jpeg.jpg"/></td>
+          </tr>
+          <tr>
+            <td>"I'm not perfect<br/>So I try everyday and I grow a little bit<br/>Read a little more so I can educate my kids<br/>Reap for my soul and cleanse my spirit
+              <br/>Pray cause I'm ready for the bloom of the sea<br/>Peace and serenity is all that I need"</td>
+            <td>Cleo <img class="iconImg" src="https://jamaicans.com/wp-content/uploads/British-Jamaican-Singer-Cleo-Sol-One-of-Eight-Emerging-Artists-Changing-the-Sound-of-Soul.jpg"/></td>
+          </tr>
+          <tr>
+            <td>"Life isn't about finding yourself. Life is about creating yourself."</td>
+            <td>George <img class= "iconImg" src= "https://www.nobelprize.org/images/shaw-12939-content-portrait-mobile-tiny.jpg"</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+
+    <section id="IndoorFriendly">
+      <div> <!--Can use ejs to make this cleaner. Incorporate ejs later-->
+        <h1>Favorite Books</h1>
+          <li>A Tree Grows in Brooklyn</li>
+          <li>Memory of Water</li>
+          <li>The God of Small Things</li>
+          <li>Perfume</li>
+          <div class = "gallery">
+            <img src= "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/TreeGrowsInBrooklyn.jpg/220px-TreeGrowsInBrooklyn.jpg" />
+            <img src= "https://images-na.ssl-images-amazon.com/images/I/51NVHJqbUmL._SX329_BO1,204,203,200_.jpg" />
+            <img src= "https://images-na.ssl-images-amazon.com/images/I/41iffjvqdQL._SX322_BO1,204,203,200_.jpg" />
+            <img src= "https://pictures.abebooks.com/1LACEYLANE/3700700586.jpg" />
+          </div>
+      </div>
+      <div>
+        <h1>Favorite Movies</h1>
+          <li>The Dark Knight</li>
+          <li>A Bronx Tale</li>
+          <li>Slumdog Millionaire</li>
+          <li>City of God</li>
+          <li>Oldboy</li>
+      </div>
+    </section>
+
+    <section id="Food">
+      <div>
+        <h1>Favorite Restaurants</h1>
+        <li>Yum and Tum</li>
+        <li>Lobsters and Burgers</li>
+        <li>Qi</li>
+        <li>Monique's Bday Restaurant</li>
+      </div>
+    </section>
+
+    <section id="Events">
+      <div>
+        <h1>Favorite Upcoming Events</h1>
+        <li>Conferences</li>
+        <li>Hackathons</li>
+        <li>Volunteering</li>
+        <li>Hobbies</li>
+      </div>
+      <div>
+        <h1>Favorite Clubs</h1>
+        <li>American</li>
+        <li>Latino</li>
+        <li>Carribbean</li>
+      </div>
+      <div>
+        <h1>Favorite Concerts</h1>
+        <li>Rihanna</li>
+        <li>Raye</li>
+        <li>Miguel</li>
+        <li>Tinashe</li>
+      </div>
+    </section>
+
+    <section id= "Travel">
+      <div id="root"></div>
+      <div>
+        <h1>Favorite Domestic Destinations</h1>
+        <li>New York</li>
+        <li>Pennsylvania</li>
+        <li>Florida</li>
+      </div>
+      <div>
+        <h1>Favorite International Destinations</h1>
+        <li>Costa Rica</li>
+        <li>Virgin Islands</li>
+        <li>Puerto Rico</li>
+        <li>Nigeria</li>
+      </div>
+    </section>
+  </div>
+  <footer>
+  </footer>
+
+  <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+  <script type="text/babel">
+  ReactDOM.render(
+      <h2>Hello, cold world! :) </h2>,
+      document.getElementById('root')
+  );
+  </script>
+
+</body>
+
+</html>
