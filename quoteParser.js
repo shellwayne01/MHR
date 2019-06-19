@@ -16,20 +16,26 @@ rp(url)
     var books = [];
     var quote = [];
     var toWatch = [];
-    var len = cheerio('.q', html).length;
-    console.log(len);
+    var qlen = cheerio('#quotesTable td', html).length;
+    var blen = cheerio('#Books li', html).length;
+    var mlen = cheerio('#Movies li', html).length;
+    // var len = cheerio('td', html).length;
+    console.log(qlen);
+    console.log(blen);
+    console.log(mlen);
+    // console.log(len);
 
     //Retrieves quotes
-    for (i=0; i < len; i++) {
+    for (i=0; i < qlen; i++) {
       // console.log('TAG '+i+' :');
       if ( isEven(i) ){
-      array1.push( cheerio('td', html)[i].children[0].data.toString() ); //quote
+      array1.push( cheerio('#quotesTable td', html)[i].children[0].data.toString() ); //quote
       }else{
-      array2.push( cheerio('td', html)[i].children[0].data.toString() ); //origin
+      array2.push( cheerio('#quotesTable td', html)[i].children[0].data.toString() ); //origin
       }
     }
 
-    // console.log(len);
+    // console.log(qlen);
     // console.log(array1.length);
     // console.log(array2.length);
 
