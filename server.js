@@ -28,7 +28,9 @@ const dbPost = new Schema({
   body: Object,
   date: Date
 });
-var User = mongoose.model("User", dbPost);
+
+//Change uri as needed (model name, schema name, collection name,  skipInit )
+var User = mongoose.model("User", dbPost, "MHR-Q");
 
 // Connect to MongoDB
 mongoose
@@ -37,17 +39,18 @@ mongoose
   .catch(err => console.log(err));
 
 // Scraping w/ Cheerio and updating JSON file
-var qP = require('./quoteParser') //refreshes the JSON file on first load
+var qP = require('./dataParser') //refreshes the JSON file on first load
 
 // Read JSON file
 var fs = require('fs');
 var quotesArray;
-fs.readFile('Quotes.json', 'utf8', function (err, data) {
+fs.readFile('public/Favs.json', 'utf8', function (err, data) {
   if (err) throw err;
   quotesArray = JSON.parse(data); //json updated from webpage info
+  console.log(quotesArray);
 });
 
-// Routes - change to ejs later
+// Routes - change to ejs? decide later
 app.get('/home', function(req, res) {
   // res.render('index');
   // res.sendFile(__dirname + "/index.html");
@@ -57,7 +60,7 @@ app.get('/home', function(req, res) {
 app.get("/addFavs", (req, res) => {
   // var myData = new User(obj);
   // myData.save()
-  User.collection.insertMany(quotesArray) //data from json
+  User.collection.insertMany(quotesArray["AllBooks"]) //data from json
     .then(item => {
       res.send("item saved to database");
     })
@@ -65,11 +68,4 @@ app.get("/addFavs", (req, res) => {
       res.status(400).send("unable to save to database");
     });
 
-// Would it be more efficient to cut out the json middleman?
-// How to account for duplicates going into atlas
-// Maybe update page with quotes entered into database rather
-// than the other way around? - Second db idea for further development
-
-//I wanted swift to access database, query to find info and update mhr tool
- // but for now ill just access the json file and update mhr tool that way.
 });
