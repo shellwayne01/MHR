@@ -2,12 +2,10 @@
 <!--
 Convert galleries to slideshows.
 Clean up to get rid of repititious code.
-Switch DB.
 -->
 <head>
-  <title>Favorites</title> <!--Use ejs to duplicate the format and allow for extraction of excel data. Or Word table-->
+  <title>Favorites</title>
   <!-- <meta/> -->
-
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
   crossorigin=""/>
@@ -34,8 +32,8 @@ Switch DB.
             <th>Origin</th>
           </tr>
           <tr>
-            <td>"Trouble don't last always. Better enjoy life now before it's too late."</td>
-            <td>Lollipop <img class= "iconImg" src= "https://raw.githubusercontent.com/shellwayne01/MHR/secondary/Images/lollipop.png" /> </td>
+            <td class="q">"Trouble don't last always. Better enjoy life now before it's too late."</td>
+            <td class="q">Lollipop <img class= "iconImg" src= "https://raw.githubusercontent.com/shellwayne01/MHR/secondary/Images/lollipop.png" /> </td>
           </tr>
           <tr>
             <td>"Oh, you think darkness is your ally. But you merely adopted the dark; I was born in it, molded by it. I didn't see the light until I was already a man, by then it was nothing to me but BLINDING! The shadows betray you, because they belong to me!"</td>
@@ -160,13 +158,14 @@ Switch DB.
   crossorigin=""></script>
    <script type="text/javascript" src="Favs.js"></script>
 
+   <!--REACT-->
    <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
    <script type="text/babel">
    ReactDOM.render(
-       <h2>Hello, cold world! :) </h2>,
+       <h2>Hello world! :) </h2>,
        document.getElementById('root')
    );
    </script> -->

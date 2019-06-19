@@ -10,22 +10,22 @@ rp(url)
   .then(function(html){
     //success!
     //Parse HTML and retrieve desired data
-    var array1 = []; //phrases
-    var array2 = []; //authors
-    var quotes = {"AllQuotes": []}; //quotes object
+    var array1 = [];
+    var array2 = [];
+    var data = {"AllQuotes": []}; //data as object
     var books = [];
     var quote = [];
     var toWatch = [];
-    var len = cheerio('td', html).length;
+    var len = cheerio('td class="q"', html).length;
     console.log(len);
 
     //Retrieves quotes
     for (i=0; i < len; i++) {
       // console.log('TAG '+i+' :');
       if ( isEven(i) ){
-      array1.push( cheerio('td', html)[i].children[0].data.toString() ); //based on html structure of site
+      array1.push( cheerio('td', html)[i].children[0].data.toString() ); //quote
       }else{
-      array2.push( cheerio('td', html)[i].children[0].data.toString() );
+      array2.push( cheerio('td', html)[i].children[0].data.toString() ); //origin
       }
     }
 
@@ -36,12 +36,12 @@ rp(url)
     //Populate quotes[] with quote objects
     for(i=0; i<array1.length; i++){
       var quote = new Quote(array1[i], array2[i]);
-      quotes["AllQuotes"].push(quote);
+      data["AllQuotes"].push(quote);
     }
 
     // console.log(quotes)
 
-    var json = JSON.stringify(quotes);
+    var json = JSON.stringify(data);
     fs.writeFile('public/Favs.json', json, 'utf8', (err) => {
       if (err) throw err;
       console.log('The file has been saved!');
@@ -75,16 +75,29 @@ rp(url)
 })
 
 
+//Custom Objects
 function Quote(phrase, origin){
   this.phrase = phrase;
   this.origin = origin;
 }
 
-function Media(books, movies){
-  this.books = books;
-  this.movies = movies;
+// function Book(title, author, genre, year){
+//   this.title= title;
+//   this.movies = movies;
+// }
+function Book(title, author){
+  this.title = title;
+  this.author = author;
 }
 
+function Movie(title, genre, year){
+  this.title = title;
+  this.genre = genre;
+  this.year = year;
+}
+
+
+//Functions
 function isEven(number){
   return (number % 2 == 0);
 }
