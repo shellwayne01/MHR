@@ -16,7 +16,7 @@ rp(url)
     var books = [];
     var quote = [];
     var toWatch = [];
-    var len = cheerio('td class="q"', html).length;
+    var len = cheerio('.q', html).length;
     console.log(len);
 
     //Retrieves quotes
