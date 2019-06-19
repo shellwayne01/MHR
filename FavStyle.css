@@ -9,6 +9,7 @@ body {
   position: fixed;
   width: 100%;
   top: 0;
+  z-index: 2000; /*for some reason elements on map had high z-index values*/
 }
 
 .mainNav a, li{
