@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/shellwayne01/MHR#readme",
   "dependencies": {
-    "body-parser": "^1.18.3",
-    "ejs": "^2.6.1",
-    "express": "^4.16.4",
-    "mongoose": "^5.4.13",
+    "body-parser": "^1.19.0",
+    "ejs": "^2.6.2",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.7",
     "request": "^2.88.0",
     "request-promise": "^4.2.4"
   }
