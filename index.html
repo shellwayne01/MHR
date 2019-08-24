@@ -1,8 +1,9 @@
 <html>
 <!-- Todo:
-Convert galleries to slideshows
-Clean up to get rid of repititious code
+Convert to carousels
+Clean up to get rid of repititious code - Maybe just use vanilla js to make a f(x) that populate a container with list elements
 Fix Popup style
+Omitted all <ul></ul> since unnecessary
 -->
 <head>
   <title>Favorites</title>
@@ -77,7 +78,7 @@ Fix Popup style
         </div>
       </div>
       <div id="Movies">
-        <h1>Movies</h1>
+          <h1>Movies</h1>
           <li>The Dark Knight</li>
           <li>A Bronx Tale</li>
           <li>Slumdog Millionaire</li>
@@ -95,7 +96,7 @@ Fix Popup style
     </section>
 
     <section id="Food">
-      <div>
+      <div id= "restaurants">
         <h1>Restaurants</h1>
         <li>Y-T</li>
         <li>L-B</li>
@@ -111,46 +112,24 @@ Fix Popup style
     </section>
 
     <section id="Events">
-      <div>
+      <div id='nicheEvents'>
         <h1>Niche Events</h1>
-        <li>Conferences</li>
-        <li>Hackathons</li>
-        <li>Volunteering</li>
-        <li>SLS</li>
-        <li>CC</li>
       </div>
-      <div>
+      <div id='concerts'>
         <h1>Concerts</h1>
-        <li>Rihanna</li>
-        <li>Raye</li>
-        <li>Miguel</li>
-        <li>Tinashe</li>
       </div>
-      <div>
+      <div id='nightlife'>
         <h1>Nightlife</h1>
-        <li>American</li>
-        <li>Latino</li>
-        <li>Carribbean</li>
       </div>
     </section>
 
     <section id= "Travel">
-      <div>
-        <div id="map"></div>
-
+      <div id="map"></div>
+      <div id="domDest">
         <h1>Domestic Destinations</h1>
-        <li>New York</li>
-        <li>Pennsylvania</li>
-        <li>Florida</li>
-        <li>California</li>
       </div>
       <div id= "intDest">
         <h1>International Destinations</h1>
-        <li>China</li>
-        <li>Virgin Islands</li>
-        <li>Puerto Rico</li>
-        <li>Nigeria</li>
-        <li>Poland</li>
       </div>
     </section>
   </div>
@@ -166,14 +145,32 @@ Fix Popup style
    <!--REACT-->
    <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
 
-   <script type="text/babel">
+   <!-- React example. Seems good for clearly defiend reusable code and making changes to one area w/o touching the rest but it cant do what I want tho -->
+   <!-- <script type="text/babel">
+   var countries = ['China', 'Virgin Islands', 'Puerto Rico', 'Nigeria', 'Poland']
+   var element = <h1>International Destinations</h1>
    ReactDOM.render(
-       <h2>Hello world! :) </h2>,
-       document.getElementById('root')
+     element
+     //Can not use loops while rendering
+      // <h1>International Destinations</h1>
+      // <ul>
+      //   for(i=0; i<countries.length(); i++){
+      //     <li>countries[i]</li>
+      //   }
+      // </ul>
+      ,
+       document.getElementById('intDest')
    );
    </script> -->
+
+   <!-- EJS example. Seems good for custom user changes -->
+   <!-- <script src="ejs.js"></script>
+   <script>
+   let people = ['geddy', 'neil', 'alex'],
+      html = ejs.render('<%= people.join(", "); %>', {people: people});
+    </script> -->
 </body>
 
 </html>
