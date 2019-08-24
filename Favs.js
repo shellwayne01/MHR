@@ -4,7 +4,7 @@ var data = {
   concerts: ['Rihanna', 'Raye', 'Miguel', 'Tinashe'],
   nightlife: ['American', 'Latino', 'Carribbean'],
   domDest:['New York', 'Pennsylvania','Florida','California'],
-  intDest:[ 'China', 'Virgin Islands', 'Puerto Rico', 'Nigeria',' Poland']
+  intDest:[ 'China', 'Virgin Islands', 'Panama', 'Nigeria',' Poland']
 }
 
 var keysArray = Object.keys(data)
@@ -29,8 +29,8 @@ addListItems(valuesArray[4], keysArray[4]);
 
 
 var destinations = document.querySelectorAll("#intDest li")
-var lats  = [39.90,18.04,18.22,9.08,51.91] //north-south
-var longs = [116.40,-64.83,-66.59,8.67,19.14] //east-west
+var lats  = [39.90,18.04,8.53,9.08,51.91] //north-south
+var longs = [116.40,-64.83,-80.78,8.67,19.14] //east-west
 
 var map = L.map('map', {
     center: [18, -7],
