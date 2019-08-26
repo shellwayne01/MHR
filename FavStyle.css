@@ -96,7 +96,7 @@ td {
 .gallery img:hover {
   animation-name: shadow;
   animation-duration: 1s;
-  transform: scale(2.0,2.0); /*bloat*/
+  transform: scale(1.5,1.5); /*bloat*/
   background-color: #2F0F4B;
 }
 
