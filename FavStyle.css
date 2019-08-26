@@ -3,41 +3,20 @@ body {
   margin: auto;
 }
 
-.mainNav {
-  display: flex;
-  flex-direction: row;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 2000; /*for some reason elements on map had high z-index values*/
-}
-
-.mainNav a, li{
-  flex:auto;
-  line-height: 3.0;  /* 3x current font size height */
-  vertical-align: middle;
-}
-
-.mainNav a:link{
-  text-decoration: none;
-}
-
-.mainNav li {
-  color: white;
-  background-color: #8056A4;
-  height: 5%;
+div {
+  background-color: white;
   text-align: center;
+  padding: 1em;
+}
+
+h1{
   font-family: 'Abril Fatface';
+  font-size: 30px;
 }
 
-.mainNav li:hover{
-  background-color: #2F0F4B;
-}
-
-.mainContent{
-  width: 75%;
-  margin: auto;
-  background-color: #CBC2E9;
+li{
+  list-style-type: none;
+  line-height: 2.5;
 }
 
 section{
@@ -46,14 +25,65 @@ section{
   border: 4px #F1EBF6 solid;
 }
 
-div {
-  background-color: white;
+td {
+  width: 50%;
   text-align: center;
   padding: 1em;
 }
 
+.mainNav {
+  display: flex;
+  flex-direction: row;
+  position: fixed;
+  width: 100%;
+  height: 8%;
+  top: 0;
+  z-index: 2000; /*for some reason elements on map had high z-index values*/
+  background-color: red;
+}
+
+  /* 3x current font size height. In order to vertical align text */
+.mainNav a,
+.mainNav li,
+.mainNav img{
+  flex: auto;
+  height: 100%;
+  line-height: 3.0;
+  text-align: center;
+  /* vertical align only works on images */
+}
+
+.mainNav a:link{
+  text-decoration: none;
+}
+
+.mainNav li{
+  color: white;
+  background-color: #8056A4;
+  font-family: 'Abril Fatface';
+  font-size: 14pt;
+}
+
+.mainNav li:hover{
+  background-color: #2F0F4B;
+}
+
+.mainNav img {
+  width:auto;
+}
+
+.mainContent{
+  width: 75%;
+  margin: auto;
+  background-color: #CBC2E9;
+}
+
 .gallery {
   display: inline-block; /*or block?*/
+}
+
+.gallery:hover{
+  /* background-color: lightgray; */
 }
 
 .gallery img {
@@ -63,27 +93,46 @@ div {
   padding: 2%;
 }
 
-.gallery img:hover{
-  animation-name: bloat;
+.gallery img:hover {
+  animation-name: shadow;
   animation-duration: 1s;
-  transform: scale(1.5,1.5);
+  transform: scale(2.0,2.0); /*bloat*/
   background-color: #2F0F4B;
 }
 
-
-h1{
-  font-family: 'Abril Fatface';
-  font-size: 30px;
-}
-li {
-  list-style-type: none;
+.gallery2 {
+  /* background-color: lightgray; */
 }
 
-td {
-  width: 50%;
-  text-align: center;
-  padding: 1em;
+.gallery2:hover{
+  /* background-color: #282828; */
 }
+
+.gallery2:hover #restaurantGallery2prev,
+.gallery2:hover #restaurantGallery2next{
+  /* background-color: #8056A4;
+  border: 3px solid #8056A4; */
+}
+
+.mainGalleryImg{
+  height: 45%;
+  width: auto;
+  margin: auto;
+  display: block;
+  margin-top: 1%;
+  margin-bottom: 1%; /*For dot*/
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  /* background-color: #bbb; */
+  background-color: #CBC2E9;
+  border: 3px solid #CBC2E9;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 
 .iconImg{
   height:auto;
@@ -95,9 +144,19 @@ td {
   height: 400px;
 }
 
-
 /*Animations*/
-@keyframes bloat {
+@keyframes shadow {
  0% {background-color: #CBC2E9;}
  100% {background-color: #2F0F4B;}
 }
+
+/* FIX LATER */
+/* Why isnt visibility affected? */
+/* @keyframes moveLeft {
+  transition-delay: 2s;
+  0% {}
+  25% {transform: translate(-400%);}
+  30% {visibility: hidden; transform: translate(400%); }
+  55% {visibility: visible; transform: translate(-400%); }
+  90% {visibility: hidden, translate(400%);}
+} */

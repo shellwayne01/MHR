@@ -1,9 +1,7 @@
 <html>
 <!-- Todo:
-Convert to carousels
-Clean up to get rid of repititious code - Maybe just use vanilla js to make a f(x) that populate a container with list elements
 Fix Popup style
-Omitted all <ul></ul> since unnecessary
+Note: Omitted all <ul></ul> since unnecessary
 -->
 <head>
   <title>Favorites</title>
@@ -17,13 +15,17 @@ Omitted all <ul></ul> since unnecessary
 
 <!--To save myself from web scraping issues, I'll just web scrape my own site-->
 <body>
+
+  <!-- <a href="#Logo"><img src= "Images/logo1.png" style="width:10%; margin-top:5%;"/></a> -->
   <nav class = "mainNav">
+    <a href="#Logo"><li><img src= "Images/logo1.png"/></li></a>
     <a href="#Quotes"><li>Quotes</li></a>
     <a href="#IndoorFriendly"><li>IndoorFriendly</li></a>
     <a href="#Food"><li>Food</li></a>
     <a href="#Events"><li>Events</li></a>
     <a href="#Travel"><li>Travel</li></a>
   </nav>
+
   <div class = "mainContent">
     <section id="Quotes">
       <div>
@@ -70,11 +72,16 @@ Omitted all <ul></ul> since unnecessary
         <li>Memory of Water</li>
         <li>The God of Small Things</li>
         <li>Perfume</li>
-        <div class = "gallery">
+        <!-- <div class = "gallery" id="bookGallery">
           <img src= "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/TreeGrowsInBrooklyn.jpg/220px-TreeGrowsInBrooklyn.jpg" />
           <img src= "https://images-na.ssl-images-amazon.com/images/I/51NVHJqbUmL._SX329_BO1,204,203,200_.jpg" />
           <img src= "https://images-na.ssl-images-amazon.com/images/I/41iffjvqdQL._SX322_BO1,204,203,200_.jpg" />
           <img src= "https://pictures.abebooks.com/1LACEYLANE/3700700586.jpg" />
+        </div> -->
+        <div class = "gallery2" id="bookGallery2">
+          <img class="mainGalleryImg" src= "https://upload.wikimedia.org/wikipedia/en/thumb/e/e6/TreeGrowsInBrooklyn.jpg/220px-TreeGrowsInBrooklyn.jpg" />
+          <span class="dot" id="bookGallery2prev"onclick="prevImg(bookGallery2)"></span>
+          <span class="dot" id="bookGallery2next" onclick="nextImg(bookGallery2)"></span>
         </div>
       </div>
       <div id="Movies">
@@ -84,13 +91,17 @@ Omitted all <ul></ul> since unnecessary
           <li>Slumdog Millionaire</li>
           <li>City of God</li>
           <li>Oldboy</li>
-          <div class = "gallery">
+          <!-- <div class = "gallery" id="movieGallery">
             <img src= "https://is1-ssl.mzstatic.com/image/thumb/Video118/v4/00/ee/3a/00ee3a87-eeda-6d4b-bb4b-5a45ef1e4579/contsched.vhzbldts.lsr/268x0w.jpg" />
             <img src= "https://upload.wikimedia.org/wikipedia/en/thumb/3/3e/A_Bronx_Tale.jpg/220px-A_Bronx_Tale.jpg" />
             <img src= "https://m.media-amazon.com/images/M/MV5BZmNjZWI3NzktYWI1Mi00OTAyLWJkNTYtMzUwYTFlZDA0Y2UwXkEyXkFqcGdeQXVyNjU0OTQ0OTY@._V1_.jpg" />
             <img src= "https://m.media-amazon.com/images/M/MV5BMGU5OWEwZDItNmNkMC00NzZmLTk1YTctNzVhZTJjM2NlZTVmXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_.jpg" />
             <img src= "https://upload.wikimedia.org/wikipedia/en/thumb/6/67/Oldboykoreanposter.jpg/220px-Oldboykoreanposter.jpg" />
-
+          </div> -->
+          <div class = "gallery2" id="movieGallery2">
+            <img class="mainGalleryImg" src= "https://is1-ssl.mzstatic.com/image/thumb/Video118/v4/00/ee/3a/00ee3a87-eeda-6d4b-bb4b-5a45ef1e4579/contsched.vhzbldts.lsr/268x0w.jpg" />
+            <span class="dot" id="movieGallery2prev"onclick="prevImg(movieGallery2)"></span>
+            <span class="dot" id="movieGallery2next" onclick="nextImg(movieGallery2)"></span>
           </div>
       </div>
     </section>
@@ -108,6 +119,13 @@ Omitted all <ul></ul> since unnecessary
           <img src= "https://havanacafe.info/images/img_6194-small.jpg?crc=468475893" />
           <img src= "https://www.simplyrecipes.com/wp-content/uploads/2019/04/Nachos-LEAD-3.jpg" />
         </div>
+
+        <!-- <div class="gallery2" id="restaurantGallery2">
+          <img class="mainGalleryImg" src="https://s3-media3.fl.yelpcdn.com/bphoto/5179Qe1e_rq0kOsi2aHELQ/ls.jpg"/>
+          <span class="dot" id="restaurantGallery2prev"onclick="prevImg(restaurantGallery2)"></span>
+          <span class="dot" id="restaurantGallery2next" onclick="nextImg(restaurantGallery2)"></span>
+        </div> -->
+
       </div>
     </section>
 
@@ -147,7 +165,7 @@ Omitted all <ul></ul> since unnecessary
    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> -->
 
-   <!-- React example. Seems good for clearly defiend reusable code and making changes to one area w/o touching the rest but it cant do what I want tho -->
+   <!-- React example. Seems good for clearly defiend reusable code and making changes to one area w/o touching the rest but it doesnt allow for what I want to do tho -->
    <!-- <script type="text/babel">
    var countries = ['China', 'Virgin Islands', 'Puerto Rico', 'Nigeria', 'Poland']
    var element = <h1>International Destinations</h1>
