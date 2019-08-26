@@ -78,7 +78,7 @@ function addListItems(dataArray, containerId){
 
 //FIX LATER
 // var id = setInterval(playGallery, 5); //wait to allow playGallery
-// function playGallery(){
+function playGallery(){
 //   var images = this.children
 //   Transform images within gallery
 //   if ( ) {
@@ -100,7 +100,7 @@ function addListItems(dataArray, containerId){
   // } else {
   //   code to change the element style
   // }
-// }
+}
 
 //Galleries
 var restArr = ["https://s3-media3.fl.yelpcdn.com/bphoto/5179Qe1e_rq0kOsi2aHELQ/ls.jpg",
