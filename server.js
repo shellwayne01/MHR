@@ -18,8 +18,11 @@ var server = app.listen(port, function() {
 
 // ------------------------------------------------------------
 // DB Config
+var key = config.MONGO_uri;
+var secret = config.MONGO_secret;
+
 var mongoose = require('mongoose')
-const db = require('./keys_dev').mongoURI;
+const db = require(key);
 const Schema = mongoose.Schema;
 const ObjectId = Schema.ObjectId;
 
